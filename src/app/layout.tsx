@@ -1,5 +1,4 @@
 import "~/styles/globals.css";
-import { headers } from "next/headers";
 import { TRPCReactProvider } from "~/trpc/react";
 
 export const metadata = {
@@ -15,7 +14,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <TRPCReactProvider headers={headers()}>
+                <TRPCReactProvider>
                     {children}
                 </TRPCReactProvider>
             </body>
