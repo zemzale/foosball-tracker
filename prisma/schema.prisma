@@ -16,6 +16,8 @@ model Match {
   player2   String
   score1    Int
   score2    Int
+  team1     String
+  team2     String
   timestamp DateTime @default(now())
 
   @@index([player1])

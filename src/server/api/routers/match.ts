@@ -15,6 +15,8 @@ export const matchRouter = createTRPCRouter({
                 player2: z.string().min(1),
                 score1: z.number().min(0),
                 score2: z.number().min(0),
+                team1: z.enum(["red", "blue"]),
+                team2: z.enum(["red", "blue"]),
             }),
         )
         .mutation(async ({ ctx, input }) => {
